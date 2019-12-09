@@ -16,6 +16,7 @@
     </strong>
 </div>
 <div class="block-content">
+  <!--
     <button type="button"
             id="btn-minicart-close"
             class="action close"
@@ -23,6 +24,7 @@
             data-bind="attr: { title: $t('Close') }">
         <span translate="'Close'"/>
     </button>
+    -->
 
     <if args="getCartParam('summary_count')">
         <strong class="subtitle" translate="'Recently added item(s)'"/>
@@ -52,13 +54,7 @@
         </if>
     </ifnot>
 
-    <div class="actions" if="getCartParam('summary_count')">
-        <div class="secondary">
-            <a class="action viewcart" data-bind="attr: {href: shoppingCartUrl}">
-                <span translate="'View and Edit Cart'"/>
-            </a>
-        </div>
-    </div>
+
 
     <if args="getCartParam('summary_count')">
         <div class="items-total">
@@ -76,6 +72,14 @@
         <each args="getRegion('subtotalContainer')" render=""/>
         <each args="getRegion('extraInfo')" render=""/>
     </if>
+
+    <div class="actions" if="getCartParam('summary_count')">
+        <div class="secondary">
+            <a class="action viewcart" data-bind="attr: {href: shoppingCartUrl}">
+                <span translate="'View and Edit Cart'"/>
+            </a>
+        </div>
+    </div>
 
     <div class="actions" if="getCartParam('possible_onepage_checkout')">
         <div class="primary">

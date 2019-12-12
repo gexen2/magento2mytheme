@@ -1,10 +1,19 @@
-.action{
-  &.primary{
-    background-color: @button-color;
-    border-color: @button-color;
-      &:hover{
-        background-color: @button-color-hover;
-        border-color: @button-color-hover;
-    }
+.action
+{
+  &.primary
+  {
+    background-color: @button-addtocart-color;
+    border-color: @button-addtocart-color;
+      &:hover
+      {
+        background-color: @button-addtocart-color-hover;
+        border-color: @button-addtocart-color-hover;
+      }
+  }
+}
+.bundle-options-container .block-bundle-summary .product-addto-links > .action, .product-item-actions .actions-secondary > .action, .product-social-links .action.tocompare, .wishlist.split.button > .action.split, .product-social-links .action.mailto.friend, .product-social-links .action.towishlist, .block-bundle-summary .action.towishlist, .product-item .action.towishlist, .table-comparison .action.towishlist{
+  color: @button-wishlistcompare-color;
+  &:hover{
+    color: @button-towishlistcompare-color-hover;
   }
 }

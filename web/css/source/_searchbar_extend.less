@@ -1,0 +1,8 @@
+input[type="text"], input[type="password"], input[type="url"], input[type="tel"], input[type="search"], input[type="number"], input[type="datetime"], input[type="email"]{
+  //border-color: @searchbar-border-color;
+  border: 3px solid @searchbar-border-color;
+}
+input:not([disabled]):focus
+{
+  box-shadow: 0 0 3px 1px @searchbar-border-color-focus;
+}

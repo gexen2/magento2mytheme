@@ -1,77 +1,157 @@
-//Add to cart button
-.action
-{
-  &.primary
-  {
-    background-color: @button-addtocart-color;
-    border-color: @button-addtocart-color;
-      &:hover
-      {
-        background-color: @button-addtocart-color-hover;
-        border-color: @button-addtocart-color-hover;
+.action {
+  // Products page: Add to cart buttons
+  &.primary {
+      background-color: @button-addtocart-color;
+      border-color: @button-addtocart-color;
+      &:hover {
+      background-color: @button-addtocart-color-hover;
+      border-color: @button-addtocart-color-hover;
       }
-  &.checkout{
-    &#top-cart-btn-checkout{
-      border-radius: 25px;
-    }
+      // Minicart: checkout button
+      &.checkout#top-cart-btn-checkout {
+          border-radius: 25px;
+      }
   }
+  // Minicart: trashcan icon
+  &.delete {
+      .minicart-items & {
+        &:before {
+        color: @minicart-icon-remove-color;
+        }
+
+        &:hover:before {
+        color: @minicart-icon-remove-color-hover;
+        }
+      }
   }
 }
 //Add to wishlist, add to compare, mail to friend color
 .product-social-links,
-.product-item{
+.product-item {
     .action {
-      &.towishlist{
+      // Add to wishlist button
+      &.towishlist {
         color: @button-towishlist-color;
-        &:hover{
+        &:hover {
           color: @button-towishlist-color-hover;
         }
       }
-      &.tocompare{
+      // Add to compare button
+      &.tocompare {
         color: @button-tocompare-color;
-        &:hover{
+        &:hover {
           color: @button-tocompare-color-hover;
         }
       }
-      &.mailto.friend{
+      // Mail to friend button
+      &.mailto.friend {
         color: @button-emailtofriend-color;
-        &:hover{
+        &:hover {
           color: @button-emailtofriend-color-hover;
         }
       }
     }
+    // Minicart: Product name
+    &-name {
+      .minicart-items & a {
+        color: @minicart-productname-color;
+        &:hover {
+          color: @minicart-productname-color-hover;
+        }
+      }
+    }
 }
-//Minicart icon
-.minicart-wrapper .action.showcart{
-  &:before{
-    color: @minicart-icon-color;
+
+// Minicart: Product image
+.product-image-photo {
+    border-radius: 7px;
+}
+
+.minicart-wrapper {
+  // Minicart: window
+  .block-minicart {
+    background-color: @minicart-background-color;
+    border-color: @minicart-background-color;
   }
-  &:hover:before{
-    color: @minicart-icon-color-hover;
-  }
-  &.active{
-    &:before{
+  // Minicart icon
+  .action.showcart {
+    &:before {
+      color: @minicart-icon-color;
+    }
+
+    &:hover:before {
       color: @minicart-icon-color-hover;
     }
-    &:hover:before{
-      color: @minicart-icon-color-hover;
+    &.active {
+      &:before {
+        color: @minicart-icon-color-hover;
+      }
+
+      &:hover:before {
+        color: @minicart-icon-color-hover;
+      }
+    }
+    // Minicart product counter
+    .counter.qty {
+      background-color: @minicart-counter-background-color;
+      min-width: 20px;
+      max-width: 24px;
+      min-height: 20px;
+      max-height: 24px;
+      border-radius: 24px;
+      padding: 0 2px;
     }
   }
 }
-//Products in cart counter icon
-.minicart-wrapper .action.showcart .counter.qty{
-  background-color: @minicart-counter-background-color;
-  min-width: 20px;
-  max-width: 24px;
-  min-height: 20px;
-  max-height: 24px;
-  border-radius: 24px;
-  padding: 0 2px;
-}
-/* W.I.P
-.actions .secondary .action viewcart{
-  a{
-    color: rgb(61, 255, 31);
+// Minicart: Edit cart text
+.actions .secondary {
+  .action.viewcart {
+    color: @button-towishlist-color;
+    &:hover {
+      color: @button-towishlist-color-hover;
+      text-decoration: none;
+    }
   }
 }
-*/
+/*
+//      Product page
+_____________________________________________*/
+
+/*
+        Toolbar
+---------------------------------------------*/
+
+// Toolbar: Product layout buttons
+.modes {
+    margin-left: 4px;
+
+    &-mode {
+      float: right;
+      padding: 7px 7px;
+
+      &:last-child {
+        border-radius: 3px 0 0 3px;
+      }
+
+      .modes-label + & {
+        border-radius: 0 3px 3px 0;
+      }
+    }
+}
+
+// Toolbar: Sort by dropdown field
+.page-products .sorter {
+    margin-right: 4px;
+}
+/*
+/*        Product buttons
+/*--------------------------------------------*/
+
+// Product name text link
+.product-item-name > a {
+  color: @productbutton-product-name-text;
+  &:hover {
+    color: @productbutton-product-name-text-hover;
+    text-decoration: none;
+  }
+}

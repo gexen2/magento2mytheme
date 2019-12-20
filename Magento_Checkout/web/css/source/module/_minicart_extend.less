@@ -1,6 +1,67 @@
-//Minicart window
-.minicart-wrapper .block-minicart
-{
-  background-color: rgb(243, 243, 243);
-  border-color: rgb(243, 243, 243);
+.block-minicart {
+  .block-content {
+    > .actions {
+      > .primary {
+        .action {
+          &.primary {
+            border-radius: 25px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.minicart-wrapper {
+  .block-minicart {
+    background-color: @minicart-background-color;
+    border-color: @minicart-background-color;
+  }
+
+  .action {
+    // Minicart icon
+    &.showcart {
+      &:before {
+        color: @minicart-icon-color;
+      }
+
+      &:hover:before {
+        color: @minicart-icon-color-hover;
+      }
+
+      &.active {
+        &:before {
+          color: @minicart-icon-color-hover;
+        }
+
+        &:hover:before {
+          color: @minicart-icon-color-hover;
+        }
+      }
+      // Minicart product counter
+      .counter.qty {
+        background-color: @minicart-counter-background-color;
+        min-width: 20px;
+        min-height: 20px;
+        max-width: 24px;
+        max-height: 24px;
+        border-radius: 24px;
+        padding: 0 2px;
+      }
+    }
+  }
+}
+.minicart-items {
+  .action {
+    // Trashcan icon
+    &.delete {
+      &:before {
+        color: @minicart-icon-remove-color;
+      }
+
+      &:hover:before {
+        color: @minicart-icon-remove-color-hover;
+      }
+    }
+  }
 }

@@ -1,6 +1,10 @@
 .block-minicart {
   .block-content {
     > .actions {
+      > .secondary {
+        color: @minicart-button-color;
+      }
+
       > .primary {
         .action {
           &.primary {
@@ -52,13 +56,15 @@
   }
 }
 .minicart-items {
+  .product-image-wrapper {
+    border-radius: @minicart-productimages-borderradius;
+  }
   .action {
-    // Trashcan icon
+    &.edit,
     &.delete {
       &:before {
         color: @minicart-icon-remove-color;
       }
-
       &:hover:before {
         color: @minicart-icon-remove-color-hover;
       }

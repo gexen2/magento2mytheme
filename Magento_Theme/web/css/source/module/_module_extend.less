@@ -1,0 +1,52 @@
+//
+//  Common
+//  _____________________________________________
+
+  body {
+    background-color: @body-background-color;
+  }
+
+    //
+    //  Header
+    //  ---------------------------------------------
+    .page-header {
+      .panel.wrapper {
+        background-color: @login-panel-background-color;
+      }
+    }
+
+    //
+    //  Footer
+    //  ---------------------------------------------
+
+    .copyright {
+      background-color: @login-panel-background-color;
+    }
+
+//
+//  Navigation
+//  _____________________________________________
+
+  .navigation {
+    background: @navigation-panel-background-color;
+
+    & .level0 > .level-top {
+      color: @navigation-panel-categories-text-color;
+      &:hover {
+        color: @navigation-panel-categories-text-color-hover;
+      }
+      &:focus {
+        color: @navigation-panel-categories-text-color-hover;
+      }
+    }
+}
+
+//
+//  Desktop
+//  _____________________________________________
+
+  .customer-welcome {
+    .action.switch {
+      color: @login-panel-icon-color;
+    }
+}

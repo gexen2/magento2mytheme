@@ -9,54 +9,6 @@
       }
     }
 }
-//Add to wishlist, add to compare, mail to friend color
-.product-social-links,
-.product-item {
-    .action {
-      // Add to wishlist button
-      &.towishlist {
-        color: @button-towishlist-color;
-        &:hover {
-          color: @button-towishlist-color-hover;
-        }
-      }
-      // Add to compare button
-      &.tocompare {
-        color: @button-tocompare-color;
-        &:hover {
-          color: @button-tocompare-color-hover;
-        }
-      }
-      // Mail to friend button
-      &.mailto.friend {
-        color: @button-emailtofriend-color;
-        &:hover {
-          color: @button-emailtofriend-color-hover;
-        }
-      }
-    }
-    // Minicart: Product name
-    &-name {
-      .minicart-items & a {
-        color: @minicart-productname-color;
-        &:hover {
-          color: @minicart-productname-color-hover;
-        }
-      }
-    }
-}
-/*
-// Minicart: Edit cart text
-.actions .secondary {
-  .action.viewcart {
-    color: @button-towishlist-color;
-    &:hover {
-      color: @button-towishlist-color-hover;
-      text-decoration: none;
-    }
-  }
-}
-*/
 /*
 //      Product page
 _____________________________________________*/
@@ -65,6 +17,7 @@ _____________________________________________*/
         Toolbar
 ---------------------------------------------*/
 
+/*
 // Toolbar: Product layout buttons
 .modes {
     margin-left: 4px;
@@ -82,22 +35,11 @@ _____________________________________________*/
       }
     }
 }
+*/
 
 // Toolbar: Sort by dropdown field
 .page-products .sorter {
     margin-right: 4px;
-}
-/*
-/*        Product buttons
-/*--------------------------------------------*/
-
-// Product name text link
-.product-item-name > a {
-  color: @productbutton-product-name-text-color;
-  &:hover {
-    color: @productbutton-product-name-text-color-hover;
-    text-decoration: none;
-  }
 }
 /*
 .action.view {
@@ -108,30 +50,3 @@ _____________________________________________*/
   color: #000;
 }
 */
-/*
-          Login panel
-_____________________________________________*/
-
-.customer-welcome .action.switch {
-  color: @login-panel-icon-color;
-}
-
-/*
-          Navigation bar
-_____________________________________________*/
-
-// Navigation bar background
-.navigation {
-  background: @navigation-panel-background-color;
-
-  & .level0 > .level-top {
-    color: @navigation-panel-categories-text-color;
-    &:hover {
-      color: @navigation-panel-categories-text-color-hover;
-    }
-
-    &:focus {
-      color: @navigation-panel-categories-text-color-hover;
-    }
-  }
-}

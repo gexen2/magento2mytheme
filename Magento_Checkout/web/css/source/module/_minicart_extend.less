@@ -2,7 +2,13 @@
   .block-content {
     > .actions {
       > .secondary {
-        color: @minicart-button-color;
+        .action.viewcart {
+          color: @minicart-button-color;
+          &:hover {
+            color: @minicart-button-color-hover;
+            text-decoration: none;
+          }
+        }
       }
 
       > .primary {
@@ -12,6 +18,7 @@
           }
         }
       }
+
     }
   }
 }

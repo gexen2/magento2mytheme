@@ -1,9 +1,23 @@
+//
+//  Mobile
+//  _____________________________________________
+
+.product-item-info {
+  .products-grid & {
+    &:hover,
+    &.active {
+      box-shadow: 3px 4px 4px 0 @producttable-color;
+      border-radius: @producttable-borderradius;
+    }
+  }
+}
+
 .product {
   &-item {
     .tocart {
       border-radius: 4px;
     }
-    
+
     .action.tocompare {
       color: @button-tocompare-color;
       &:hover {

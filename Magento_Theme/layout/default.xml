@@ -2,11 +2,19 @@
 
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
+      <referenceBlock name="welcome" remove="true"/>
+      <referenceBlock name="header" remove="true"/>
+
         <referenceBlock name="logo">
             <arguments>
                 <argument name="logo_img_width" xsi:type="number">30</argument>
                 <argument name="logo_img_height" xsi:type="number">12</argument>
             </arguments>
         </referenceBlock>
+        <referenceContainer name="footer-container">
+            <referenceContainer name="footer">
+              <referenceBlock name="copyright" remove="true" />
+            </referenceContainer>
+        </referenceContainer>
     </body>
 </page>

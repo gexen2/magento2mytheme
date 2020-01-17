@@ -29,15 +29,27 @@
 
   .navigation {
     background: @navigation-panel-background-color;
+    border-radius: 10px;
 
     & .level0 > .level-top {
       color: @navigation-panel-categories-text-color;
+      font-size: @navigation-text-size;
       &:hover {
         color: @navigation-panel-categories-text-color-hover;
+        font-size: @navigation-text-size;
       }
       &:focus {
         color: @navigation-panel-categories-text-color-hover;
       }
+      &.ui-state-focus {
+        color: @navigation-panel-categories-text-color-hover;
+        font-size: @navigation-text-size;
+      }
+    }
+    & .level0.active > .level-top {
+      border-color: @navigation-highlight-categories-underline-color;
+      color: @navigation-panel-categories-text-color;
+      font-size: @navigation-text-size;
     }
 }
 
@@ -49,4 +61,8 @@
     .action.switch {
       color: @login-panel-icon-color;
     }
+}
+
+.nav-sections-item-content {
+  background-color: @body-background-color;
 }
